@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
+import SearchParams from "./SearchParams";
+import React from "react";
+import { render } from "react-dom";
+  const App = () => {
+    return React.createElement("div", {}, [
+      <SearchParams/>
+      
+    ]);
+  };
+  
+  //ReactDOM.render(React.createElement(App), document.getElementById("root"));
+render(<App />, document.getElementById("root"));
 export default App;
+
+/*        const res = fetch(
+            `https://api.whatsapp.com/send?phone=91${finalNumber}&text=${finalMessage}`,
+            {method: 'GET', mode: 'no-cors', redirect: 'follow', headers: {
+                'Content-Type': 'url/api'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+                },}
+        );*/
